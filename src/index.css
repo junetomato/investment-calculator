@@ -32,18 +32,14 @@ body {
 }
 
 #user-input {
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+  padding: 2rem;
   max-width: 30rem;
   margin: 2rem auto;
   border-radius: 4px;
   background: linear-gradient(180deg, #307e6c, #2b996d);
-}
-
-.input-group {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1.5rem;
-  margin-block: 1.5rem;
 }
 
 #user-input label {
@@ -63,6 +59,12 @@ body {
   background-color: transparent;
   color: #c2e9e0;
   font-size: 1rem;
+}
+
+#user-input .error {
+  color: #e06c75;
+  font-size: 0.7rem;
+  margin-top: 0.25rem;
 }
 
 #result {
