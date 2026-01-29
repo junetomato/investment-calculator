@@ -1,7 +1,11 @@
-function App() {
+import Result from "./util/components/Result"
+import UserInput from "./util/components/UserInput"
+
+export default function App() {
   return (
-    <h1>React Investment Calculator</h1>
+    <>
+      <UserInput />
+      <Result />
+    </>
   )
 }
-
-export default App
