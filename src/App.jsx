@@ -1,10 +1,10 @@
 import Result from "./util/components/Result"
-import UserInput from "./util/components/UserInput"
+import UserInputs from "./util/components/UserInputs"
 
 export default function App() {
   return (
     <>
-      <UserInput />
+      <UserInputs />
       <Result />
     </>
   )
