@@ -1,7 +1,10 @@
 import { useState } from "react"
 
+import { INITIAL_DATA } from "../util/investment"
+
+
 export default function Input({ name, investmentID, onChangeHandler }) {
-  const [ value, setValue ] = useState(0)
+  const [ value, setValue ] = useState(INITIAL_DATA[investmentID])
 
   const editedName = name.toLowerCase().replace(/\s+/g, "-")
 
@@ -9,6 +12,7 @@ export default function Input({ name, investmentID, onChangeHandler }) {
     setValue(e.target.value)
     onChangeHandler({[investmentID]: +e.target.value})
   }
+
 
   return (
     <div>

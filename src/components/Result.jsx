@@ -1,4 +1,4 @@
-import { formatter } from "../investment";
+import { formatter } from "../util/investment";
 
 export default function Result({ data }) {
   return (

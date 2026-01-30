@@ -1,15 +1,9 @@
 import { useState } from "react"
 
-import Result from "./util/components/Result"
-import Input from "./util/components/Input"
-import { calculateInvestmentResults } from "./util/investment"
+import Result from "./components/Result"
+import Input from "./components/Input"
+import { calculateInvestmentResults, INITIAL_DATA } from "./util/investment"
 
-const INITIAL_DATA = {
-  initialInvestment: 0,
-  annualInvestment: 0,
-  expectedReturn: 0,
-  duration: 0,
-}
 
 export default function App() {
   const [ investmentData, setInvestmentData ] = useState(INITIAL_DATA)
@@ -22,6 +16,7 @@ export default function App() {
   }
 
   const investmentResults = calculateInvestmentResults(investmentData);
+
 
   return (
     <>
