@@ -40,7 +40,6 @@ export default function Input({ data, handlerDataUpdate }) {
           onChange={(e => handlerDataUpdate({ duration: +e.target.value }))}
           value={data.duration}
         />
-        {data.duration < 1 && <p className="error">Please enter a value greater than 0</p>}
       </div>
     </section>
   )

@@ -7,6 +7,8 @@ import { INITIAL_DATA } from "./util/investment"
 export default function App() {
   const [ investmentData, setInvestmentData ] = useState(INITIAL_DATA)
 
+  const inputIsValid = Object.values(investmentData).every(value => value > 0)
+
   function onChangeHandler( newInputObj ) {
     setInvestmentData(prevInvestmentData => ({
       ...prevInvestmentData,
@@ -18,7 +20,10 @@ export default function App() {
   return (
     <>
       <Input data={investmentData} handlerDataUpdate={onChangeHandler} />
-      <Result data={investmentData} />
+      {inputIsValid ?
+        <Result data={investmentData} /> :
+        <p className="center error">Please enter values greater than 0</p>
+      }
     </>
   )
 }

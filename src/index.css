@@ -61,12 +61,6 @@ body {
   font-size: 1rem;
 }
 
-#user-input .error {
-  color: #e06c75;
-  font-size: 0.7rem;
-  margin-top: 0.25rem;
-}
-
 #result {
   max-width: 50rem;
   margin: 2rem auto;
